@@ -1,0 +1,380 @@
+@charset "UTF-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+ins {
+	text-decoration: none;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+div#container {
+	background: transparent url(images/headerBg.png) top left repeat-x;
+}
+
+div#header {
+	height: 133px;
+	padding-top: 30px;
+}
+
+div#header ul li div#m1 {
+	padding: 0;
+	margin: 0;
+	border: thin solid #fff;
+}
+
+div#header ul li div#m1 a{
+	font: normal normal 0.8em/1em "Trebuchet MS", Arial, sans-serif;
+	background-image: none;
+	background-color:#208aa9;
+	display:block;
+	height:35px;
+	text-indent: 1px;
+	padding: 5px 0 0 5px;
+	color: #fff;
+	text-decoration: none;
+	height: 20px;
+}
+
+div#header ul li div#m1 a:hover{
+	background-color:#28a7bf;
+	color: #fff;
+}
+
+div#wrapper {
+	width: 950px;
+	margin: 0 auto;
+	padding: 0 25px;
+}
+
+div#content {
+	width: 1000px;
+	min-height: 500px;
+	padding-bottom: 80px;
+}
+
+div#banner {
+	margin-top: 20px;
+}
+
+div#news {
+	margin: 20px 20px 20px 0;
+}
+
+div#column {
+	width: 900px;
+	margin: 0 auto;
+}
+
+div#column p{
+	padding: 10px 20px 20px 10px;
+}
+
+div#column p img{
+	float: left;
+	margin: 5px 15px 15px 5px;
+	width: 70px;
+}
+
+div#highlights {
+	width: 435px;
+	float: left;
+	margin: 0 0 0 20px;
+}
+
+div.project {
+	padding: 10px;
+	float: left;
+	width: 435px;
+}
+
+div.project p img {
+	float: left;
+	padding-right: 20px;
+}
+
+div#footer {
+	background-color: #002942;
+}
+
+div#footer p {
+	color: #ffffff;
+	text-align: center;
+}
+
+div#footer p a {
+	color: #f5e79a;
+}
+
+div#footer p a:hover {
+	color: #ff6600;
+}
+
+h1 {
+	width: 227px;
+	height: 63px;
+	background-image: url(images/logo.png);
+	margin: 0 auto;
+}
+
+h1 span {
+	display:none;
+}
+h2 {
+	font: normal 2em/1.3em "Trebuchet MS", Arial, sans-serif;
+	padding: 20px 0 5px 0;
+	color: #002942;
+}
+h3, span.headline {
+	font: normal small-caps 1.2em/1.3em "Trebuchet MS", Arial, sans-serif;
+	padding: 10px 0;
+	color: #002942;
+}
+
+p {
+	font: normal 0.8em/1.3em "Trebuchet MS", Arial, sans-serif;
+	padding: 10px;
+	color: #002942;
+}
+
+p.block {
+	min-height: 100px;
+}
+
+p.alone {
+	width: 900px;
+	margin: 30px auto 0 auto;
+	line-height: 2em;
+	font-size: 0.9em;
+	min-height: 50px;
+}
+
+p.odd {
+	background-color: #f5e79a;
+}
+
+a {
+	color: #002942;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #ff6700;
+}
+
+.clear {
+	clear: both;
+	padding: 20px 0;
+}
+
+div#column ul li {
+	font: normal 0.8em/1.3em "Trebuchet MS", Arial, sans-serif;
+	color: #002942;
+}
+/*****************************/
+/* Menu */
+/*****************************/
+
+ul.menu {
+	width: 680px;
+	margin: 0 auto;
+	padding-top: 15px;
+	height: 40px;
+}
+
+ul.menu li {
+	float: left;
+	padding-left: 20px;
+}
+
+ul.menu li a {
+	height: 35px;
+	background: url(images/menu.png) no-repeat;
+	display:block;
+	text-indent:-9999px;
+}
+
+ul.menu li#home a {
+	width: 70px;
+	background-position: 0 7px;
+}
+
+ul.menu li#about a {
+	width: 70px;
+	background-position: -99px 7px;
+}
+
+ul.menu li#projects a {
+	width: 88px;
+	background-position: -198px 7px;
+}
+
+ul.menu li#blog a {
+	width: 66px;
+	background-position: -311px 7px;
+}
+
+ul.menu li#jobs a {
+	width: 61px;
+	background-position: -402px 7px;
+}
+
+ul.menu li#press a {
+	width: 70px;
+	background-position: -491px 7px;
+}
+ul.menu li#join a {
+	width: 80px;
+	background-position: -579px 7px;
+}
+
+ul.menu li#home a:hover, ul.menu li#home.active a {
+	background-position: 0 -23px;
+}
+
+ul.menu li#about a:hover, ul.menu li#about.active a {
+	background-position: -99px -23px;
+}
+
+ul.menu li#projects a:hover, ul.menu li#projects.active a {
+	background-position: -198px -23px;
+}
+
+ul.menu li#blog a:hover, ul.menu li#blog.active a {
+	background-position: -311px -23px;
+}
+
+ul.menu li#jobs a:hover, ul.menu li#jobs.active a {
+	background-position: -402px -23px;
+}
+
+ul.menu li#press a:hover, ul.menu li#press.active a {
+	background-position: -491px -23px;
+}
+
+ul.menu li#join a:hover, ul.menu li#join.active a {
+	background-position: -579px -23px;
+}
+
+/*************************/
+/*** FeedBurner format ***/
+/*************************/
+
+div.feedburnerFeedBlock {
+	border:none;
+	font: normal 0.8em/1.3em "Trebuchet MS", Arial, sans-serif;
+	background-color:#fff;
+	/*padding:10px;*/
+}
+
+div.feedburnerFeedBlock ul {
+	margin-left:0;
+	/*padding-left:10px;*/
+	list-style-type: none
+}
+
+div.feedburnerFeedBlock ul ul {
+	list-style-type: disc;
+}
+
+div.feedburnerFeedBlock ul ol {
+	list-style-type: decimal;
+}
+
+div.feedburnerFeedBlock ul li {
+	float:left;
+	margin:0 40px 0 0;
+	width:400px;
+}
+
+div.feedburnerFeedBlock ul li span.headline {
+	font-weight:bold;
+	display:block;
+	margin:12px 0 0 0;
+}
+
+div.feedburnerFeedBlock ul li div ul {
+	list-style-type:none;
+}
+
+div.feedburnerFeedBlock ul li div ul li{
+	margin-bottom: 10px;
+}
+
+div.feedburnerFeedBlock ul li span.headline a {
+	text-decoration: none;
+	font-size: 1.3em;
+	font-weight:normal;
+}
+
+div.feedburnerFeedBlock ul li span.headline a:hover {
+	color: #ff6700;
+}
+
+div.feedburnerFeedBlock div#creditfooter {
+	clear: both;
+}
+
+p.date {
+	color: #ff6700;
+	font-size: 1em;
+	padding:0 0 10px;
+}
+
+/*************************/
+/*** SubMenu format ***/
+/*************************/
+
+#sddm
+{	z-index: 30;}
+
+#sddm div
+{	position: absolute;
+	visibility: hidden;
+}
+
+#sddm div a
+{	position: relative;
+    display: block;
+	margin: 0;
+	padding: 5px 10px;
+	width: auto;
+}
+
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>eMoksha</title>
+<link type="text/css" href="main.css" rel="stylesheet">
+
+<script>
+// Copyright 2006-2007 javascript-array.com
+var timeout	= 500;
+var closetimer	= 0;
+var ddmenuitem	= 0;
+
+// open hidden layer
+function mopen(id)
+{	
+  // cancel close timer
+  mcancelclosetime();
+
+  // close old layer
+  if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+  // get new layer and show it
+  ddmenuitem = document.getElementById(id);
+  ddmenuitem.style.visibility = 'visible';
+}
+
+// close showed layer
+function mclose()
+{
+  if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+  closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+  if(closetimer)
+  {
+    window.clearTimeout(closetimer);
+    closetimer = null;
+  }
+}
+
+// close layer when click-out
+document.onclick = mclose;
+</script>
+
+</head>
+
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";  
+  feedback_widget_options.company = "emokshaorg";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#222";
+  feedback_widget_options.style = "idea";
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+
+<div id="container">
+	<div id="wrapper">
+        <div id="header">
+            <h1><span>eMoksha</span></h1>
+             <ul id="sddm" class="menu">
+                <li id="home"><a href="index.html">Home</a></li>
+	        <li id="about" class="active"><a href="about.html" onmouseover="mopen('m1')" onmouseout="mclosetime()">About</a>
+		    <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		        <a href="team.html">Team</a>
+		        <a href="advisors.html">Advisors</a>
+		        <a href="partners.html">Partners</a>
+		    </div>
+		</li>
+                <li id="projects"><a href="projects.html">Projects</a></li>
+                <li id="blog"><a href="http://emokshaorg.blogspot.com" target="_blank">Blog</a></li>
+                <li id="jobs"><a href="jobs.html">Jobs</a></li>
+                <li id="press"><a href="press.html">Press</a></li>
+                <li id="join"><a href="http://emoksha.ning.com/main/authorization/signUp?" target="_blank">Join</a></li>
+            </ul>
+        </div>
+        <div id="content">
+          <p class="alone"><b>Below are our key partners.</b></p>
+          <div id="column">
+		  <p class="block"><a href="http://www.nnfi.org.in"><img src="images/nnfi.png"></a>The vision for <b>National Network For India</b> is a vibrant India where the benefits of progress are enjoyed by all citizens, not just a privileged few. NNFI has been instrumental in launching and promoting VoteReport India. NNFI is also our partner in <a href="http://www.voiceofthenation.org">Voice of the Nation</a> and FixOurCity Delhi initiatives.</p>
+		  <p class="block"><a href="http://www.ushahidi.com"><img src="http://www.sharek961.org/sharikblog/wp-content/uploads/2009/06/logoushahidi1.png"></a><b>Ushahidi</b> is an award-winning platform, started in Kenya, that crowd-sources citizen reporting. </p>
+		  <p class="block"><a href="http://www.swiftapp.org"><img src="images/swift.png"></a><b>SwiftRiver</b> is a platform that makes sense of multiple sources of information in a fast-changing situation. </p>
+		  <p class="block"><a href="http://www.frontlinesms.com"><img src="http://www.sharek961.org/sharikblog/wp-content/uploads/2009/06/logofrontline1.jpg"></a><b>FrontlineSMS</b> is free software that enables users to send and receive text messages with large groups of people through mobile phones. </p>
+		  <p class="block"><a href="http://www.aliveinafghanistan.org"><img src="images/aliveinafghanistan.jpg"></a><b>Alive in Afghanistan</b> is an independent, non-partisan project, formed in response to the huge success of Alive in Baghdad and Alive in Gaza and the result of the hard work and collaboration of many partners and individuals. Alive in Afghanistan empowers Afghan citizens to participate in society by reporting on their political process.</p>
+		  <p class="block"><a href="http://www.therootspace.org"><img src="http://www.sharek961.org/sharikblog/wp-content/uploads/2009/06/logorootspace1.gif"></a><b>RootSpace</b> is a non-profit organization in Lebanon working to support sustainable knowledge-based development through promoting innovation, social entrepreneurship, media, and ICT for development. </p>
+           </div>
+          <div class="clear"></div>
+
+        </div>
+    </div>
+</div>
+<div id="footer">
+	<p>© 2008 eMoksha.org. All Rights Reserved. <a href="mailto:contact@emoksha.org">Email</a></p>
+</div>
+<body>
+</body>
+</html>

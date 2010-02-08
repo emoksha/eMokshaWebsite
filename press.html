@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>eMoksha</title>
+<link type="text/css" href="main.css" rel="stylesheet">
+
+<script>
+// Copyright 2006-2007 javascript-array.com
+var timeout	= 500;
+var closetimer	= 0;
+var ddmenuitem	= 0;
+
+// open hidden layer
+function mopen(id)
+{	
+  // cancel close timer
+  mcancelclosetime();
+
+  // close old layer
+  if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+  // get new layer and show it
+  ddmenuitem = document.getElementById(id);
+  ddmenuitem.style.visibility = 'visible';
+}
+
+// close showed layer
+function mclose()
+{
+  if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+  closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+  if(closetimer)
+  {
+    window.clearTimeout(closetimer);
+    closetimer = null;
+  }
+}
+
+// close layer when click-out
+document.onclick = mclose;
+</script>
+
+</head>
+
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";  
+  feedback_widget_options.company = "emokshaorg";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#222";
+  feedback_widget_options.style = "idea";
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+
+<div id="container">
+	<div id="wrapper">
+        <div id="header">
+            <h1><span>eMoksha</span></h1>
+             <ul id="sddm" class="menu">
+                <li id="home"><a href="index.html">Home</a></li>
+				<li id="about"><a href="about.html" onmouseover="mopen('m1')" onmouseout="mclosetime()">About</a>
+					<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+						<a href="team.html">Team</a>
+						<a href="advisors.html">Advisors</a>
+						<a href="partners.html">Partners</a>
+					</div>
+				</li>
+
+                <li id="projects"><a href="projects.html">Projects</a></li>
+                <li id="blog"><a href="http://emokshaorg.blogspot.com" target="_blank">Blog</a></li>
+                <li id="jobs"><a href="jobs.html">Jobs</a></li>
+                <li id="press" class="active"><a href="press.html">Press</a></li>
+                <li id="join"><a href="http://emoksha.ning.com/main/authorization/signUp?" target="_blank">Join</a></li>
+            </ul>
+        </div>
+        <div id="content">
+          <p class="alone"><b>Below are press articles related to our projects and events.</b>
+          <div id="column">
+		  <h3>VoteReport India</h3>
+		    <ul>
+		    <li><a href="pdfs/midday-vri.pdf" target="_blank">Mid-day Mumbai</a>
+		    <li><a href="http://english.aljazeera.net//focus/indiaelections/2009/04/2009418114915169787.html" target="_blank">Strong India poll reaction online</a>
+		    <li><a href="http://www.thenational.ae/article/20090427/FOREIGN/704269802/1002" target="_blank">Website keeps candidates in line</a>
+		    <li><a href="http://www.techtree.com/India/News/Report_Poll_Irregularities_With_Vote_Report_India/551-101239-643.html" target="_blank">Report Poll Irregularities With Vote Report India</a>
+		    <li><a href="http://www.business-standard.com/india/news/devangshu-datta-outstepthe-times/357520/" target="_blank">Devangshu Datta: Out of step with the times</a>
+		    <li><a href="http://www.cxotoday.com/India/News/Fight_Election_Malpractices_with_Tech/551-101283-912.html" target="_blank">VoteReport LS Malpractices</a>
+		    <li><a href="http://www.hindu.com/2009/04/25/stories/2009042550561400.htm" target="_blank">A Click Away</a>
+		    </ul><br />
+		  <h3>Sharek961</h3>
+		    <ul>
+		    <li><a href="http://arabcrunch.com/2009/06/sharek961-crowdsourcing-news-reporting-of-the-lebanese-june-7th-parliamentary-election.html" target="_blank">Crowdsourcing News Reporting of the Lebanese June 7th Parliamentary Election</a>
+		    <li><a href="http://mobileactive.org/tagging/sharek961" target="_blank">Election Observation in Lebanon</a>
+		    <li><a href="http://frontlineclub.com/blogs/mikewhills/2009/06/sharek961-lebanon-monitors-its-own-elections.html" target="_blank">Lebanon monitors its own elections</a>
+		    </ul><br />
+		  <h3>FixOurCity</h3>
+		    <ul>
+		    <li><a href="pdfs/toi-fixourcity.pdf" target="_blank">Mr FixIt</a>
+		    </ul><br />
+		  <h3>AliveInAfghanistan</h3>
+		    <ul>
+		    <li><a href="http://www.bbc.co.uk/blogs/technology/2009/08/mapping_the_afghan_elections.html" target="_blank">Mapping the Afghan Elections</a>
+		    <li><a href="http://washingtonindependent.com/55610/great-afghan-election-resource-alive-in-afghanistan" target="_blank">Great Afghan Election Resource : Alive in Afghanistan</a>
+		    <li><a href="http://news.icm.ac.uk/business/afghanistan-presidential-election/3242/" target="_blank">Afghanistan Presidential Election</a>
+		    <li><a href="http://http//latimesblogs.latimes.com/babylonbeyond/2009/08/afghanistantwitter-blogs-circumvent-government-media-blackout.html" target="_blank">Historic elections continued, despite threats of violence</a>
+		    </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+	<p>© 2008 eMoksha.org. All Rights Reserved. <a href="mailto:contact@emoksha.org">Email</a></p>
+</div>
+<body>
+</body>
+</html>

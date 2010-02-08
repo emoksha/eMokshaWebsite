@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>eMoksha</title>
+<link type="text/css" href="main.css" rel="stylesheet">
+
+<script>
+// Copyright 2006-2007 javascript-array.com
+var timeout	= 500;
+var closetimer	= 0;
+var ddmenuitem	= 0;
+
+// open hidden layer
+function mopen(id)
+{	
+  // cancel close timer
+  mcancelclosetime();
+
+  // close old layer
+  if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+  // get new layer and show it
+  ddmenuitem = document.getElementById(id);
+  ddmenuitem.style.visibility = 'visible';
+}
+
+// close showed layer
+function mclose()
+{
+  if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+  closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+  if(closetimer)
+  {
+    window.clearTimeout(closetimer);
+    closetimer = null;
+  }
+}
+
+// close layer when click-out
+document.onclick = mclose;
+</script>
+
+</head>
+
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";  
+  feedback_widget_options.company = "emokshaorg";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#222";
+  feedback_widget_options.style = "idea";
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+
+<div id="container">
+	<div id="wrapper">
+        <div id="header">
+            <h1><span>eMoksha</span></h1>
+             <ul id="sddm" class="menu">
+                <li id="home"><a href="index.html">Home</a></li>
+	        <li id="about" class="active"><a href="about.html" onmouseover="mopen('m1')" onmouseout="mclosetime()">About</a>
+		    <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		        <a href="team.html">Team</a>
+		        <a href="advisors.html">Advisors</a>
+		        <a href="partners.html">Partners</a>
+		    </div>
+		</li>
+                <li id="projects"><a href="projects.html">Projects</a></li>
+                <li id="blog"><a href="http://emokshaorg.blogspot.com" target="_blank">Blog</a></li>
+                <li id="jobs"><a href="jobs.html">Jobs</a></li>
+                <li id="press"><a href="press.html">Press</a></li>
+                <li id="join"><a href="http://emoksha.ning.com/main/authorization/signUp?" target="_blank">Join</a></li>
+            </ul>
+        </div>
+        <div id="content">
+		   <p class="alone"><b>Below are our key advisors.</b></p>
+           <div id="column"><p><img src="http://emoksha.org/images/stories/mike-portrait-red.jpg"><b>Mike Mathieu</b> is the founder of <a href="http://www.frontseat.org">Front Seat</a>, a civic software company and incubator. Prior to Front Seat, Mike spent six years as founder and CEO of All Star Directories, an INC 500-listed publisher of online and career school directories. During the 1990's, Mike was General Manager of MSN.com and the MSN Search engine at Microsoft, and helped build Microsoft Excel and Word into the leading office applications. He is a partner and former lead partner in Social Venture Partners, a leading U.S. venture philanthropy network and past Board President of the Technology Access Foundation. Mike holds a BA, Magna Cum Laude in the History of Science from Harvard University, and lives in Seattle with his wife and two kids.
+		  </p>
+		  <p><img src="http://egovernments.org/images/srikanth-small2.jpg"><b>Srikanth Nadhamuni</b> is a technologist and entrepreneur, who spent 14 years in California’s Silicon Valley with companies such as Sun Microsystems, Intel Corporation – in chip design, Silicon Graphics – Interactive TV, Haealtheon|WebMD and GlobeTrades – Internet startups. He relocated to Bangalore in 2002 and partnered up with Nandan Nilekani (co-chairman Infosys) to start the <a href="http://www.egovernments.org">eGovernments Foundation </a> – to provide Municipal eGovernance software products to improve governance and public service delivery in Indian cities. Today eGovernments Foundation works in over 200 cities in 7 states of the country. eGov also created an Education Management System that aims to improve learning and retention in government schools across India, the EMS  is currently being deployed in 3 states in India covering over 2 crore (20 million) primary school children. Apart from being the Managing Trustee of the eGovernments Foundation, Srikanth is also in the eGovernance Core Committee setup by the Govt. of Karnataka.  
+		  </p></div>
+       </div>
+   <div class="clear"></div>
+   </div>
+</div>
+<div id="footer">
+	<p>© 2008 eMoksha.org. All Rights Reserved. <a href="mailto:contact@emoksha.org">Email</a></p>
+</div>
+<body>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>eMoksha</title>
+<link type="text/css" href="main.css" rel="stylesheet">
+
+<script>
+// Copyright 2006-2007 javascript-array.com
+var timeout	= 500;
+var closetimer	= 0;
+var ddmenuitem	= 0;
+
+// open hidden layer
+function mopen(id)
+{	
+  // cancel close timer
+  mcancelclosetime();
+
+  // close old layer
+  if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+  // get new layer and show it
+  ddmenuitem = document.getElementById(id);
+  ddmenuitem.style.visibility = 'visible';
+}
+
+// close showed layer
+function mclose()
+{
+  if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+  closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+  if(closetimer)
+  {
+    window.clearTimeout(closetimer);
+    closetimer = null;
+  }
+}
+
+// close layer when click-out
+document.onclick = mclose;
+</script>
+
+</head>
+<div id="container">
+	<div id="wrapper">
+        <div id="header">
+            <h1><span>eMoksha</span></h1>
+             <ul id="sddm" class="menu">
+                <li id="home" class="active"><a href="index.html">Home</a></li>
+				<li id="about"><a href="about.html" onmouseover="mopen('m1')" onmouseout="mclosetime()">About</a>
+					<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+						<a href="team.html">Team</a>
+						<a href="advisors.html">Advisors</a>
+						<a href="partners.html">Partners</a>
+					</div>
+				</li>
+
+                <li id="projects"><a href="projects.html">Projects</a></li>
+                <li id="blog"><a href="http://emokshaorg.blogspot.com" target="_blank">Blog</a></li>
+                <li id="jobs"><a href="jobs.html">Jobs</a></li>
+                <li id="press"><a href="press.html">Press</a></li>
+                <li id="join"><a href="http://emoksha.ning.com/main/authorization/signUp?" target="_blank">Join</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            
+		<p class="alone">eMoksha is a non-partisan non-profit organization focused on enabling citizen awareness and engagement using internet and mobile technologies. We're passionate about using advancement in technologies for enabling meaningful changes in the society, with a focus towards building stronger democracies and better societies, in developing and under-developed countries. </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+	<p>© 2008 eMoksha.org. All Rights Reserved. <a href="mailto:contact@emoksha.org">Email</a></p>
+</div>
+<body>
+</body>
+</html>

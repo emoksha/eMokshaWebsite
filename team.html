@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>eMoksha</title>
+<link type="text/css" href="main.css" rel="stylesheet">
+
+<script>
+// Copyright 2006-2007 javascript-array.com
+var timeout	= 500;
+var closetimer	= 0;
+var ddmenuitem	= 0;
+
+// open hidden layer
+function mopen(id)
+{	
+  // cancel close timer
+  mcancelclosetime();
+
+  // close old layer
+  if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+  // get new layer and show it
+  ddmenuitem = document.getElementById(id);
+  ddmenuitem.style.visibility = 'visible';
+}
+
+// close showed layer
+function mclose()
+{
+  if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+  closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+  if(closetimer)
+  {
+    window.clearTimeout(closetimer);
+    closetimer = null;
+  }
+}
+
+// close layer when click-out
+document.onclick = mclose;
+</script>
+
+</head>
+
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";  
+  feedback_widget_options.company = "emokshaorg";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#222";
+  feedback_widget_options.style = "idea";
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+
+<div id="container">
+	<div id="wrapper">
+        <div id="header">
+            <h1><span>eMoksha</span></h1>
+             <ul id="sddm" class="menu">
+                <li id="home"><a href="index.html">Home</a></li>
+	        <li id="about" class="active"><a href="about.html" onmouseover="mopen('m1')" onmouseout="mclosetime()">About</a>
+		    <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		        <a href="team.html">Team</a>
+		        <a href="advisors.html">Advisors</a>
+		        <a href="partners.html">Partners</a>
+		    </div>
+		</li>
+
+                <li id="projects"><a href="projects.html">Projects</a></li>
+                <li id="blog"><a href="http://emokshaorg.blogspot.com" target="_blank">Blog</a></li>
+                <li id="jobs"><a href="jobs.html">Jobs</a></li>
+                <li id="press"><a href="press.html">Press</a></li>
+                <li id="join"><a href="http://emoksha.ning.com/main/authorization/signUp?" target="_blank">Join</a></li>
+            </ul>
+        </div>
+        <div id="content">
+		<p class="alone"><b>eMoksha is a volunteer-driven organization. Below are few of our key contributors and collaborators.</b></p>
+        <div id="column">
+		  <p class="block"><img src="images/selvam.jpg"><b>Selvam Velmurugan</b> is the founder of eMoksha. He is an internet technologist with more than 12 years of experience in building and managing distributed web-scale systems. During his 10-year stint at <a href="http://www.amazon.com">Amazon</a>, he devised complex search algorithms, setup the Chennai Development Center, and managed critical platform components for <a href="http://aws.amazon.com">AWS</a>. In the past, he has been part of several non-profit initiatives, notably being a core member of the Tsunami Relief team at Amazon collecting over $15 million in relief funds. Selvam holds an MS in CS from <a href="http://www.uga.edu">University of Georgia</a> and BS in CS from <a href="http://annauniv.edu">College of Engineering</a>, Guindy. He also holds a Diploma in Film-making from <a href="http://www.uwashington.edu">University of Washington</a>.</p>
+		  <p class="block"><img src="images/shanmugam.jpg"><b>Shanmugam Sriraman</b> is a lead volunteer and developer for eMoksha.org. He has helped launch <a href="http://chennai.fixourcity.org">FixOurCity Chennai</a> and organize the first <a href="http://barcamps.org/iDemocracyCamp">iDemocracyCamp</a> in Chennai. He is a Senior Software Engineer at Amazon.com and in his spare time focuses on honing his photography skills.</p>
+		  <p class="block"><img src="images/anant.jpg"><b>Anant Trivedi</b> is a retired IT and engineering professional, member of the British Computer Society and a chartered engineer. Founder member of <a href="http://www.nnfi.org.in">National Network For India</a>, acting as their strategist. Also a founder member of VoteSmartIndia and Get Together For India.</p>
+		  <p class="block"><img src="images/gaurav.jpg"><b>Gaurav Mishra</b>Gaurav Mishra leads research on internet and society in emerging countries as the 2008-09 Yahoo! Fellow at Georgetown University. He writes about social media and social change at <a href="http://www.gauravonomics.com">Gauravonomics.</a></p>
+		  <p class="block"><img src="images/kaushal.jpg"><b>Kaushal Jhalla</b> Kaushal Jhalla is a co-founder of <a href="http://www.swiftapp.org">Swift</a>, and is a volunteer at <a href="http://www.ushahidi.com">Ushahidi</a>. In his daylife, he is a Systems Analayst for Payment and Transaction systems in the SF Bay Area. He blogs at <a href="http://citizenafrica.com">citizenafrica.com.</a></p>
+		  <p class="block"><img src="images/munish.gif"><b>Munish Sivagurunath</b> is the founder of <a href="http://www.imayaminc.com">Imayam Inc</a>, a technology consulting company. He is also a founding board member of <a href="http://nia-arayofhope.org">Nia - A Ray of Hope</a>, a non-profit organization with a mission to empower women in developing countries to pursue their higher education.</p>
+		  <p class="block"><img src="images/mohan-azri.jpg"><b>Mohan Azri</b> is the co-founder of <a href="www.azrisolutions.com">Azri Solutions</a> a digi-media strategy & technology consulting firm. Over the last 5 years he has been actively working with non-profits and education institutes advising them on technology adoption and web strategy.</p>
+		  <p class="block"><img src="images/satchit.jpg"><b>Satchit Balsari</b> is an emergency physician at NewYork-Presbyterian Hospital and <a href="http://hhi.harvard.edu/about-us/fellows/119-satchit-balsari-md-mph">Fellow</a> at the Harvard Humanitarian Initiative. His current work in India, focused on strenghtening emergency response systems, includes <a href="http://www.emcounter.com">EMcounter</a>, <a href="http://www.mumbaivoices.com">mumbaiVOICES</a> and <a href="http://www.mumbaiemex.org">MEMEx</a>.</p>
+		  <p class="block"><img src="images/ian.jpg"><b>Ian Pye</b> is a graduate student at Univeristy of California, Santa Cruz. He is currently working on the <a href="http://wikitrust.soe.ucsc.edu/">WikiTrust</a> project at UC. WikiTrust is developing open-source software which computes the origin and author of every word of a wiki, as well as a measure of text trust that indicates the extent with which text has been revised. In addition to online collaboration, Ian is interested in issues of reliability in crowd sourced information.</p>
+		  <p class="block"><img src="images/dipti.jpg"><b>Dipti Thuse</b> is a volunteer for eMoksha.org and helped launch VoteReport India and VoteReport Afghanistan.</p>
+        </div>
+    </div>
+</div>
+<div id="footer">
+	<p>© 2008 eMoksha.org. All Rights Reserved. <a href="mailto:contact@emoksha.org">Email</a></p>
+</div>
+<body>
+</body>
+</html>

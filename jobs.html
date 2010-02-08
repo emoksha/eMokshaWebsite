@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>eMoksha</title>
+<link type="text/css" href="main.css" rel="stylesheet">
+
+<script>
+// Copyright 2006-2007 javascript-array.com
+var timeout	= 500;
+var closetimer	= 0;
+var ddmenuitem	= 0;
+
+// open hidden layer
+function mopen(id)
+{	
+  // cancel close timer
+  mcancelclosetime();
+
+  // close old layer
+  if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+  // get new layer and show it
+  ddmenuitem = document.getElementById(id);
+  ddmenuitem.style.visibility = 'visible';
+}
+
+// close showed layer
+function mclose()
+{
+  if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+  closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+  if(closetimer)
+  {
+    window.clearTimeout(closetimer);
+    closetimer = null;
+  }
+}
+
+// close layer when click-out
+document.onclick = mclose;
+</script>
+
+</head>
+</head>
+
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";  
+  feedback_widget_options.company = "emokshaorg";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#222";
+  feedback_widget_options.style = "idea";
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+
+<div id="container">
+	<div id="wrapper">
+        <div id="header">
+            <h1><span>eMoksha</span></h1>
+             <ul id="sddm" class="menu">
+                <li id="home"><a href="index.html">Home</a></li>
+				<li id="about"><a href="about.html" onmouseover="mopen('m1')" onmouseout="mclosetime()">About</a>
+					<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+						<a href="team.html">Team</a>
+						<a href="advisors.html">Advisors</a>
+						<a href="partners.html">Partners</a>
+					</div>
+				</li>
+
+                <li id="projects"><a href="projects.html">Projects</a></li>
+                <li id="blog"><a href="http://emokshaorg.blogspot.com" target="_blank">Blog</a></li>
+                <li id="jobs" class="active"><a href="jobs.html">Jobs</a></li>
+                <li id="press"><a href="press.html">Press</a></li>
+                <li id="join"><a href="http://emoksha.ning.com/main/authorization/signUp?" target="_blank">Join</a></li>
+            </ul>
+        </div>
+        <div id="content">
+         <p class="alone"><b>Below are our paid-job openings. If you're interested in volunteering, contact us at <a href="mailto:volunteer@emoksha.org">volunteer@emoksha.org</a></b> </p>
+         <div id="column">
+		  <p><b>Role:</b> Social Entrepreneurship Intern<br />
+		  <b>Duration:</b> Between 3-6 months<br />
+		  <b>Renumeration:</b> Based on experience and skillset<br /><br />
+
+		  <b>Responsibilities:</b><br />
+		     Work with a varied set of organizations to build consensus on key initiatives<br />
+		     Manage volunteers and/or contractors to successfully deliver on technical and business goals<br />
+		     Build strong partnership with print/radio/TV media outlets<br /><br />
+		  
+		  <b>Qualifications:</b><br />
+		    Highly motivated in making meaningful changes to the society<br />
+		    Excellent communication skills (both verbal and written)<br />
+		    Ability to build consensus and drive decisions<br />
+		    Minimum 2 years experience with program and people management<br />
+		    Technical background in Computer Science (preferred)<br /><br />
+
+                  <a href="mailto:jobs@emoksha.org">Click to apply</a>
+
+		  </p>
+                </div>
+            <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+	<p>© 2008 eMoksha.org. All Rights Reserved. <a href="mailto:contact@emoksha.org">Email</a></p>
+</div>
+<body>
+</body>
+</html>
